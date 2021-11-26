@@ -66,8 +66,15 @@ namespace CalculateArea
 
 
             // Display output
-            Console.WriteLine("The circle's area is "
+            if (Geometry.AreaOfCircle(radius) == 0)
+            {
+                Console.WriteLine("Error");
+            }
+            else
+            {
+                Console.WriteLine("The circle's area is "
                     + Geometry.AreaOfCircle(radius));
+            }
             Console.ReadKey();
         }
 
@@ -90,8 +97,15 @@ namespace CalculateArea
             //todo
 
             // Display output
-            Console.WriteLine("The rectangle's area is "
+            if (Geometry.AreaOfRectangle(length, width) == 0)
+            {
+                Console.WriteLine("Error");
+            }
+            else
+            {
+                Console.WriteLine("The rectangle's area is "
                     + Geometry.AreaOfRectangle(length, width));
+            }
             Console.ReadKey();
         }
 
@@ -119,8 +133,15 @@ namespace CalculateArea
             //read key value
 
             // Display the triangle's area.
-            Console.WriteLine("The triangle's area is "
-                    + Geometry.AreaOfTriangle(ground, height));
+            if (Geometry.AreaOfTriangle(ground, height) == 0)
+            {
+                Console.WriteLine("Error");
+            }
+            else
+            {
+                Console.WriteLine("The triangle's area is "
+                        + Geometry.AreaOfTriangle(ground, height));
+            }
             Console.ReadKey();
         }
     }
