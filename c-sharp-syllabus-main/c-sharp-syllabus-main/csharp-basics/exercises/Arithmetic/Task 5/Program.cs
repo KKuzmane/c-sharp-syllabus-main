@@ -11,7 +11,7 @@ namespace Task_5
         static void Main(string[] args)
         {
             int minRange = 1;
-            int maxRange = 2;
+            int maxRange = 100;
             Console.WriteLine("Guess the number between " + minRange + " and " + maxRange + ". Enter your guess here: ");
             string xInput = Console.ReadLine();
             int x = Convert.ToInt32(xInput);
