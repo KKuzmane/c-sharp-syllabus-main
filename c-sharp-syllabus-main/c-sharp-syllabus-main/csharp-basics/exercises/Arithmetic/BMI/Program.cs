@@ -22,8 +22,6 @@ namespace BMI
             string inputHeightM = Console.ReadLine();
             double height = (Convert.ToDouble(inputHeightM) * (1/ inchMultiplyer));
             double BMI = Math.Round(((weight * 703) / (Math.Pow(height, 2))), 2);
-            //Console.WriteLine(height);
-           // Console.WriteLine(weight);
           
             if(BMI < optimalBMIMin)
             {
