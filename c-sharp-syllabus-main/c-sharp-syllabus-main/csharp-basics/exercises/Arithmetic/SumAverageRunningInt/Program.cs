@@ -15,7 +15,6 @@ namespace SumAverageRunningInt
             {
                 sum += number;
                 average = Math.Round((sum / number), 2);
- 
             }
             Console.WriteLine("The average is " + average);
             Console.WriteLine("The sum of " + lowerBound + " to " + upperBound + " is " + sum);
