@@ -33,7 +33,7 @@ namespace PrintDayInWord
                 case 6:
                     Console.WriteLine("Saturday");
                     break;
-                case 7:
+                case 0:
                     Console.WriteLine("Sunday");
                     break;
                 default:
