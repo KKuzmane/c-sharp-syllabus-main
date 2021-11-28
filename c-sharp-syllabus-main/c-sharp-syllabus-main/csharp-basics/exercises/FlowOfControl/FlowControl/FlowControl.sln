@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintDayInWord", "PrintDayI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintDayInWord - If", "PrintDayInWord - If\PrintDayInWord - If.csproj", "{723EA1D2-AF13-42C6-BDF5-421DFCA117A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneKeyPad swich", "PhoneKeyPad swich\PhoneKeyPad swich.csproj", "{4DBF6354-3A0E-40EF-A041-ECA938F251E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{723EA1D2-AF13-42C6-BDF5-421DFCA117A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{723EA1D2-AF13-42C6-BDF5-421DFCA117A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{723EA1D2-AF13-42C6-BDF5-421DFCA117A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DBF6354-3A0E-40EF-A041-ECA938F251E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBF6354-3A0E-40EF-A041-ECA938F251E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBF6354-3A0E-40EF-A041-ECA938F251E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBF6354-3A0E-40EF-A041-ECA938F251E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
