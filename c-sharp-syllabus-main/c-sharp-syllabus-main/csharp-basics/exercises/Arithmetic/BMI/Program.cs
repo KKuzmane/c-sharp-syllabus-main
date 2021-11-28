@@ -10,7 +10,6 @@ namespace BMI
     {
         static void Main(string[] args)
         {
-            // BMI = weight * 703 / height ^ 2 (weight - pounds, height - inches)
             double optimalBMIMin = 18.5;
             double optimalBMIMax = 25;
             double pundMultiplyer = 0.45359237;
