@@ -21,7 +21,7 @@ namespace Exercise4
 
             if (myArray.Contains(number))
             {
-            Console.WriteLine("Contains!");
+                Console.WriteLine("Contains!");
             }
             else
             {
