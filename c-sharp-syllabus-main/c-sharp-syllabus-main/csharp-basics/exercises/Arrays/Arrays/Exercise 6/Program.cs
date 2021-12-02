@@ -10,29 +10,42 @@ namespace Exercise_6
     {
         static void Main(string[] args)
         {
+            int min = 1;
+            int max = 100;
+            int a = -7;
             int[] randomNums = new int[10];
             Random number = new Random();
-            int counter = 0;
 
-            while (counter < 10)
+            Console.Write("Array 1: ");
+
+            for (int i = 0; i < randomNums.Length; i++ )
             {
-                int random = number.Next(1, 100);
+                randomNums[i] = number.Next( min, max );
+            }
 
-                if(Array.IndexOf(randomNums, random) <= 0)
+            for(int j = 0; j<randomNums.Length; j++)
+            {
+                if(j == randomNums.Length-1)
                 {
-                    randomNums[counter] = random;
-                    counter++;
+                    Console.Write(a);
+                }
+                else
+                {
+                    Console.Write(randomNums[j] + " ");
                 }
             }
 
-            for(int i = 0; i< 10; i++)
+            int[] newRandomNums = new int[10];
+
+            randomNums.CopyTo(newRandomNums, 0);
+
+            Console.WriteLine();
+            Console.Write("Array 2: ");
+
+            foreach (var item in newRandomNums)
             {
-                Console.Write(randomNums[i]);
+                Console.Write(item + " ");
             }
-
-            int[] newArray = randomNums;
-            Console.WriteLine(newArray);
-
             Console.ReadKey();
         }
     }
