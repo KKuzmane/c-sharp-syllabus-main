@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{16DACC2A-A38E-4B48-AC4D-30BFAA802973}</ProjectGuid>
+    <ProjectGuid>{BD4F4162-8EB5-47C8-A3F6-EB5A49E84642}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Exercise3</RootNamespace>
-    <AssemblyName>Exercise3</AssemblyName>
+    <RootNamespace>Exercise_6</RootNamespace>
+    <AssemblyName>Exercise 6</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,8 +34,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
