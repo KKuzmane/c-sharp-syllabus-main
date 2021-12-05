@@ -31,12 +31,12 @@ namespace Exercise_6
                 {
                     Console.Write(i + " ");
                 }
+
                 if(i % 20 == 0)
                 {
                     Console.WriteLine();
                 }
             }
-
             Console.ReadKey();
         }
     }
