@@ -8,29 +8,29 @@ namespace Exercise_1
 {
     internal class Product
     {
-        private string name;
-        private double price;
-        private int amount;
+        private string _name;
+        private double _price;
+        private int _amount;
 
         public Product(string productName, double productPrice, int productAmount)
         {
-            this.name = productName;
-            this.price = productPrice;
-            this.amount = productAmount;
+            this._name = productName;
+            this._price = productPrice;
+            this._amount = productAmount;
         }
 
         public void PrintProduct()
         {
-            Console.WriteLine($"{name}, price {price}EUR, amount {amount}");
+            Console.WriteLine($"{_name}, price {_price}EUR, amount {_amount}");
         }
 
         public void ChangeAmount(int newAmount)
         {
-            this.amount = newAmount;
+            this._amount = newAmount;
         }
         public void ChangePrice(double newPrice)
         {
-            this.price = newPrice;
+            this._price = newPrice;
         }
         public static void Main()
         {
@@ -73,19 +73,19 @@ namespace Exercise_1
 
                 if (inputProduct == 1)
                 {
-                    Console.WriteLine("Enter new amount of " + firstProduct.name);
+                    Console.WriteLine("Enter new amount of " + firstProduct._name);
                     int newAmountFirstProduct = int.Parse(Console.ReadLine());
                     firstProduct.ChangeAmount(newAmountFirstProduct);
                 }
                 else if (inputProduct == 2)
                 {
-                    Console.WriteLine("Enter new amount of " + secondProduct.name);
+                    Console.WriteLine("Enter new amount of " + secondProduct._name);
                     int newAmountSecondProduct = int.Parse(Console.ReadLine());
                     secondProduct.ChangeAmount(newAmountSecondProduct);
                 }
                 else if (inputProduct == 3)
                 {
-                    Console.WriteLine("Enter new amount of " + thirdProduct.name);
+                    Console.WriteLine("Enter new amount of " + thirdProduct._name);
                     int newAmountThirdProduct = int.Parse(Console.ReadLine());
                     thirdProduct.ChangeAmount(newAmountThirdProduct);
                 }
@@ -112,19 +112,19 @@ namespace Exercise_1
 
                 if (inputProduct == 1)
                 {
-                    Console.WriteLine("Enter new price of " + firstProduct.name);
+                    Console.WriteLine("Enter new price of " + firstProduct._name);
                     double newPriceFirstProduct = double.Parse(Console.ReadLine());
                     firstProduct.ChangePrice(newPriceFirstProduct);
                 }
                 else if (inputProduct == 2)
                 {
-                    Console.WriteLine("Enter new price of " + secondProduct.name);
+                    Console.WriteLine("Enter new price of " + secondProduct._name);
                     double newPriceSecondProduct = double.Parse(Console.ReadLine());
                     secondProduct.ChangePrice(newPriceSecondProduct);
                 }
                 else if (inputProduct == 3)
                 {
-                    Console.WriteLine("Enter new price of " + thirdProduct.name);
+                    Console.WriteLine("Enter new price of " + thirdProduct._name);
                     double newPriceThirdProduct = double.Parse(Console.ReadLine());
                     thirdProduct.ChangePrice(newPriceThirdProduct);
                 }
