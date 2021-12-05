@@ -1,27 +1,37 @@
-﻿namespace Exercise4
+﻿using System;
+using System.Linq;
+
+namespace Exercise4
 {
     class Program
     {
-        //TODO: print all vowels using for and foreach
         static void Main(string[] args)
         {
             char[] vowels = {'a', 'e', 'i', 'o', 'u'};
+            Console.WriteLine("Enter your favorite quote: ");
+            string input = Console.ReadLine().ToLower();
+            char[] charArray = input.ToCharArray();
 
-            /*
-            todo - use for
-            for (?) 
+            Console.WriteLine("All vowels in you quote: ");
+            for (int i = 0; i < input.Length; i++) 
             {
-                Console.WriteLine(vowels[i]);
+                if (charArray[i] == 'a' || charArray[i] == 'e' || charArray[i] == 'i' || charArray[i] == 'o' || charArray[i] == 'u')
+                {
+                    Console.Write(charArray[i] + " ");
+                } 
             }
-            */
 
-            /*
-            todo - use foreach
-            for (?) 
+            Console.WriteLine();
+            Console.WriteLine("All vowels in you quote: ");
+
+            foreach (char ch in charArray) 
             {
-                Console.WriteLine(vowel);
+                if (vowels.Contains(ch))
+                {
+                    Console.Write(ch + " ");
+                }
             }
-            */
+            Console.ReadKey();
         }
     }
 }
