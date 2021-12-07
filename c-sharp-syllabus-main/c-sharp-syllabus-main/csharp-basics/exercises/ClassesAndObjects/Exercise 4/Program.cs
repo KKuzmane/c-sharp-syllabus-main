@@ -57,5 +57,15 @@ namespace Exercise_4
             }
             return filtered.ToArray();
         }
+
+        public string Display()
+        {
+            return $"{_title} {_studio} {_rating}";
+        }
+
+        public override string ToString()
+        {
+            return $"{_title} {_studio} {_rating}";
+        }
     }
 }
