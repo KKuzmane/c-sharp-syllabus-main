@@ -24,14 +24,13 @@ namespace Exercise_3
         {
             if (currentFuel < 70)
             {
-                this._currentFuel++;
+                this._currentFuel = 70;
             }
             else
             {
                 Console.WriteLine("Gas tank is full. You must drive!");
                 this._currentFuel = 70;
             }
-            //this._currentFuel = currentFuel;
         }
         public void Decrement(double currentFuel)
         {
@@ -58,12 +57,10 @@ namespace Exercise_3
 
                 fuelCar1.Increment(currentFuelCar1);
 
-            Console.WriteLine(fuelCar1._currentFuel);
-
             while(fuelCar1._currentFuel > 0)
             {
                 mileageCar1.Increment(mileageCar1._mileage);
-                fuelCar1.Decrement(fuelCar1._currentFuel);
+                mileageCar1.FuelDecrement(fuelCar1);
 
                 Console.WriteLine($"Mileage: {mileageCar1._mileage}");
                 Console.WriteLine($"Fuel level: {fuelCar1.ReturnsCurrentFuel()}");

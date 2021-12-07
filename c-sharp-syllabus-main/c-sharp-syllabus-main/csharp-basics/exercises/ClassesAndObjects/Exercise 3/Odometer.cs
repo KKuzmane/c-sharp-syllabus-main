@@ -33,9 +33,9 @@ namespace Exercise_3
             }
             this._mileage = currentMileage;
         }
-        public void FuelDecrement(int currentMileage, FuelGauge carFuel)
+        public void FuelDecrement(FuelGauge carFuel)
         {
-            if(currentMileage % 10 == 0)
+            if(this._mileage % 10 == 0)
             {
                 carFuel.Decrement(carFuel._currentFuel);
             }
