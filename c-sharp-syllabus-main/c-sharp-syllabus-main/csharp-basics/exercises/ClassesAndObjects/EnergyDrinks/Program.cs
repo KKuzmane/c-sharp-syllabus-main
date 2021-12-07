@@ -8,28 +8,47 @@ namespace EnergyDrinks
 {
     class Program
     {
-        private const int NumberedSurveyed = 12467;
-        private const double PurchasedEnergyDrinks = 0.14;
-        private const double PreferCitrusDrinks = 0.64;
+        public int NumberedSurveyed;
+        public double PurchasedEnergyDrinks;
+        public double PreferCitrusDrinks;
+
+        private Program(int numberSurveyed, double purchasedEnergyDrinks, double preferCitrusDrinks)
+        {
+            NumberedSurveyed = numberSurveyed;
+            PurchasedEnergyDrinks = purchasedEnergyDrinks;
+            PreferCitrusDrinks = preferCitrusDrinks;
+        }
 
         private static void Main(string[] args)
         {
-            //fixme
-            /*
-             Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
-             Console.WriteLine("Approximately " + energyDrinkers + " bought at least one energy drink");
-             Console.WriteLine(preferCitrus + " of those " + "prefer citrus flavored energy drinks.");
-             */
+            Program survey = new Program(12467, 0.14, 0.64);
+
+            double count = survey.CalculateEnergyDrinkers();
+            double newCount = survey.CalculatePreferCitrus(count);
+
+            Console.WriteLine("Total number of people surveyed " + survey.ReturnSurveyedCount() + ".");
+            Console.WriteLine("Approximately " + count + " bought at least one energy drink,");
+            Console.WriteLine(newCount + " of those " + "prefer citrus flavored energy drinks.");
+
+            Console.ReadKey();
         }
 
-        double CalculateEnergyDrinkers(int numberSurveyed)
+        double CalculateEnergyDrinkers()
         {
-            throw new Exception("Sorry, no code written :(");
+            double count = NumberedSurveyed * PurchasedEnergyDrinks;
+
+            return count;
         }
 
-        double CalculatePreferCitrus(int numberSurveyed)
+        double CalculatePreferCitrus(double count)
         {
-            throw new Exception("Sorry, no code written :(");
+            double newCount = Math.Round((count * PreferCitrusDrinks), 2);
+
+            return newCount;
+        }
+         int ReturnSurveyedCount()
+        {
+            return NumberedSurveyed;
         }
     }
 }
