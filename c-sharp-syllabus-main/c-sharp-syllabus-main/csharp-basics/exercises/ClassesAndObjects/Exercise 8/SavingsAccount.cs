@@ -65,7 +65,7 @@ namespace Exercise_8
         public double InterestEarned()
         {
             double monthlyInterestRate = _interestRate / 12;
-            _interestEarnedMonthly = Math.Round(((monthlyInterestRate * _balance) + _balance), 2);
+            _interestEarnedMonthly = Math.Round(((monthlyInterestRate + 1) * _balance), 2);
             return _interestEarnedMonthly;
         }
         public double EndingBalance()
