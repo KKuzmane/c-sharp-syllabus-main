@@ -52,7 +52,7 @@ namespace VideoStore
             }
         }
 
-        public void ListInventory()
+        public void ListInventoryV()
         {
             foreach (Video film in _videoList)
             {

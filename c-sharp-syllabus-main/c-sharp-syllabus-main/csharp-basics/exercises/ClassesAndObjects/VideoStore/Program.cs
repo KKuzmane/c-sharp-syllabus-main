@@ -47,9 +47,7 @@ namespace VideoStore
 
         private static void ListInventory()
         {
-           
-                _videoStore.ListInventory();
-            
+            _videoStore.ListInventoryV();
         }
 
         private static void FillVideoStore()
@@ -83,11 +81,11 @@ namespace VideoStore
 
         public void TakeUsersRating(double rating, string title)
         {
-            foreach (var item in _videoList)
+            foreach (var item in _videoStore._videoList)
             {
                 if (item.Title == title)
                 {
-                    item.Average(rating);
+                    item.ReceivingRating(rating);
                     break;
                 }
             }
