@@ -5,19 +5,22 @@
         private string _name;
         private double _money;
 
-        public Account(string v1, double v2)
+        public Account(string name, double money)
         {
-            
+            _money = money;
+            _name = name;
         }
 
-        public double Withdrawal(double i)
+        public double Withdrawal(double money)
         {
-            return i;
+            _money = _money - money;
+
+            return _money;
         }
 
-        public void Deposit(double i)
+        public void Deposit(double money)
         {
-            
+            _money = _money + money;
         }
 
         public double Balance()
@@ -34,6 +37,12 @@
         {
             get => _name;
             set => _name = value;
+        }
+
+        public static void Transfer(Account from, Account to, double howMuch)
+        {
+            to._money += howMuch;
+            from._money -= howMuch;
         }
     }
 }
