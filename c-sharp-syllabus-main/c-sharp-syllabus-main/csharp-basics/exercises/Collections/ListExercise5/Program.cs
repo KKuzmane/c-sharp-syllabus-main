@@ -10,7 +10,7 @@ namespace ListExercise5
     {
         static void Main(string[] args)
         {
-            var colors = new List<string>
+            List<string> colors = new List<string>
             {
                 "Red",
                 "Green",
@@ -19,11 +19,21 @@ namespace ListExercise5
                 "Black"
             };
 
-            Console.WriteLine(string.Join(",", colors));
+            foreach(string color in colors)
+            {
+                Console.WriteLine(color);
+            }
 
-            //TODO: Change the third element with "Yellow"
+            Console.WriteLine("_____New list_____");
 
-            Console.WriteLine(string.Join(",", colors));
+            colors[2] = "Yellow";
+
+            foreach (string color in colors)
+            {
+                Console.WriteLine(color);
+            }
+
+            Console.ReadKey();
         }
     }
 }
