@@ -38,11 +38,6 @@ namespace ListExercise11
             }
 
             Console.ReadKey();
-            //TODO: Sort your list in alphabetical order
-
-            //TODO: Check if your list contains "Foobar" element
-
-            //TODO: Print each element of list using loop
         }
     }
 }
