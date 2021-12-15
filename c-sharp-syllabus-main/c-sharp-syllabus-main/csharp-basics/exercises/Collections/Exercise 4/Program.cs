@@ -14,7 +14,11 @@ namespace Exercise_4
             int number = int.Parse(Console.ReadLine());
             int res = number;
 
-            while(res != 1)
+            List<int> list = new List<int>();
+            list.Add(1);
+            list.Add(res);
+
+            while(list.Count() == list.Distinct().Count())
             {
                 int[] math = res.ToString().Select(o => Convert.ToInt32(o) - 48).ToArray();
 
@@ -24,12 +28,9 @@ namespace Exercise_4
                 {
                     res += Convert.ToInt32(Math.Pow(digit, 2));
                 }
-                if(res == number)
-                {
-                    Console.WriteLine(res);
-                    break;
-                }
+                
                 Console.WriteLine(res);
+                list.Add(res);
             }
 
             if (res == 1)
