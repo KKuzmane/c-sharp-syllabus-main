@@ -32,6 +32,16 @@ namespace Exercise_1
         {
             this._price = newPrice;
         }
+
+        public static void PrintMenu()
+        {
+            Console.WriteLine("Choose product");
+            Console.WriteLine("1. Logitech mouse");
+            Console.WriteLine("2. iPhone 5s");
+            Console.WriteLine("3. Epson EB-U05");
+            Console.WriteLine("4. Exit");
+        }
+
         public static void Main()
         {
             Product firstProduct = new Product("Logitech mouse", 70.00, 14);
@@ -57,11 +67,7 @@ namespace Exercise_1
 
             if (input == 1)
             {
-                Console.WriteLine("Choose product");
-                Console.WriteLine("1. Logitech mouse");
-                Console.WriteLine("2. iPhone 5s");
-                Console.WriteLine("3. Epson EB-U05");
-                Console.WriteLine("4. Exit");
+                PrintMenu();
 
                 int inputProduct = int.Parse(Console.ReadLine());
 
@@ -96,11 +102,7 @@ namespace Exercise_1
             }
             else if (input == 2)
             {
-                Console.WriteLine("Choose product");
-                Console.WriteLine("1. Logitech mouse");
-                Console.WriteLine("2. iPhone 5s");
-                Console.WriteLine("3. Epson EB-U05");
-                Console.WriteLine("4. Exit");
+                PrintMenu();
 
                 int inputProduct = int.Parse(Console.ReadLine());
 

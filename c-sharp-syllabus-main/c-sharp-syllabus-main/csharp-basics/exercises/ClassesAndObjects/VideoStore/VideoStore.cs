@@ -5,21 +5,21 @@ namespace VideoStore
 {
     class VideoStore
     {
-        public List<Video> _videoList;
+        public List<Video> VideoList;
 
         public VideoStore()
         {
-            _videoList = new List<Video>();
+            VideoList = new List<Video>();
         }
 
         public void AddVideo(string title)
         {
-            _videoList.Add(new Video(title));
+            VideoList.Add(new Video(title));
         }
         
         public void Checkout(string title)
         {
-            foreach (var item in _videoList)
+            foreach (var item in VideoList)
             {
                 if(item.Title == title)
                 {
@@ -31,7 +31,7 @@ namespace VideoStore
 
         public void ReturnedVideo(string title)
         {
-            foreach(var item in _videoList)
+            foreach(var item in VideoList)
             {
                 if(item.Title == title)
                 {
@@ -43,7 +43,7 @@ namespace VideoStore
 
         public void TakeUsersRating(double rating, string title)
         {
-            foreach(var item in _videoList)
+            foreach(var item in VideoList)
             {
                 if(item.Title == title)
                 {
@@ -54,9 +54,9 @@ namespace VideoStore
 
         public void ListInventoryV()
         {
-            foreach (Video film in _videoList)
+            foreach (Video film in VideoList)
             {
-                Console.Write(film.ToString());
+                Console.Write(film.ToString() + " ");
             }
         }
     }

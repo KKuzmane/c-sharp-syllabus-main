@@ -14,6 +14,7 @@ namespace Exercise_3
         {
             this._mileage = currentMileage;
         }
+
         public int StartMileage()
         {
             Console.WriteLine("Enter yout current mileage in km: ");
@@ -21,6 +22,7 @@ namespace Exercise_3
             this._mileage = currentMileage;
             return currentMileage;
         }
+
         public void Increment(int currentMileage)
         {
             if (currentMileage < 999999)
@@ -33,6 +35,7 @@ namespace Exercise_3
             }
             this._mileage = currentMileage;
         }
+
         public void FuelDecrement(FuelGauge carFuel)
         {
             if(this._mileage % 10 == 0)

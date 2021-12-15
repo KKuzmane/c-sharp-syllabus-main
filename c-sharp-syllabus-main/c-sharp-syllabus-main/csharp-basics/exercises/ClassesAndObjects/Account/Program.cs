@@ -30,8 +30,8 @@ namespace Account
             Console.WriteLine("-----------------------------------");
 
             bartosAccount.Deposit(20);
-            Account.Transfer(mattsAccount, myAccount, 50);
-            Account.Transfer(myAccount, mySecondAccount, 25);
+            Transfer(mattsAccount, myAccount, 50);
+            Transfer(myAccount, mySecondAccount, 25);
 
             Console.WriteLine("Final state");
             Console.WriteLine(bartosAccount);
@@ -41,6 +41,12 @@ namespace Account
             Console.WriteLine("-----------------------------------");
 
             Console.ReadKey();
+        }
+
+        public static void Transfer(Account from, Account to, double howMuch)
+        {
+            to.Deposit(howMuch);
+            from.Withdrawal(howMuch);
         }
     }
 }

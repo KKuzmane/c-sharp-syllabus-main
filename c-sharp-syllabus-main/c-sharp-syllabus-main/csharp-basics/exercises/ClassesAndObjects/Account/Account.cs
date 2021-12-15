@@ -13,14 +13,14 @@
 
         public double Withdrawal(double money)
         {
-            _money = _money - money;
+            _money -= money;
 
             return _money;
         }
 
         public void Deposit(double money)
         {
-            _money = _money + money;
+            _money += money;
         }
 
         public double Balance()
@@ -37,12 +37,6 @@
         {
             get => _name;
             set => _name = value;
-        }
-
-        public static void Transfer(Account from, Account to, double howMuch)
-        {
-            to._money += howMuch;
-            from._money -= howMuch;
         }
     }
 }

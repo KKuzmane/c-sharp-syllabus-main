@@ -81,7 +81,7 @@ namespace VideoStore
 
         public void TakeUsersRating(double rating, string title)
         {
-            foreach (var item in _videoStore._videoList)
+            foreach (var item in _videoStore.VideoList)
             {
                 if (item.Title == title)
                 {

@@ -42,14 +42,7 @@ namespace Exercise_7
         }
         public bool HasSameMotherAs(Dog otherDog)
         {
-            if (this._mother == otherDog._mother)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return this._mother == otherDog._mother;
         }
     }
 }

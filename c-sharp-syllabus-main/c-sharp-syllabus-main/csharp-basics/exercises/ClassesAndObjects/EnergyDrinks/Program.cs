@@ -47,8 +47,8 @@ namespace EnergyDrinks
             return newCount;
         }
          int ReturnSurveyedCount()
-        {
+         {
             return NumberedSurveyed;
-        }
+         }
     }
 }

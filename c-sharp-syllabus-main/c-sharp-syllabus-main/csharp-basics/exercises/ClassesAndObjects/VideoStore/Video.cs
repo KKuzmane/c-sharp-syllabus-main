@@ -7,18 +7,18 @@ namespace VideoStore
     {
         public string Title { get; set; }
         public bool CheckedOut { get; private set; }
-        public List<double> _rating { get; set; }
+        public List<double> Rating { get; set; }
 
         public Video(string title, double averageUserRating)
         {
             Title = title;
-            _rating = new List<double> {averageUserRating};
+            Rating = new List<double> {averageUserRating};
         }
 
         public Video(string title)
         {
             Title = title;
-            _rating = new List<double>();
+            Rating = new List<double>();
         }
 
         public void BeingCheckedOut()
@@ -33,12 +33,12 @@ namespace VideoStore
 
         public void ReceivingRating(double rating)
         {
-            _rating.Add(rating);
+            Rating.Add(rating);
         }
 
         public double AverageRating()
         {
-            return _rating.Average();
+            return Rating.Average();
         }
 
         public bool Available()
@@ -50,12 +50,12 @@ namespace VideoStore
 
         public override string ToString()
         {
-            return $"{Title} {AverageRating()} {Available()}";
+            return $"{Title}, {AverageRating()}, {Available()}";
         }
 
         public double Average()
         {
-            return _rating.Sum() / _rating.Count;
+            return Rating.Sum() / Rating.Count;
         }
     }
 }

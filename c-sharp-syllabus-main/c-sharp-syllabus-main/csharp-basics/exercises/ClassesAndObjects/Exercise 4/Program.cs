@@ -9,28 +9,29 @@ namespace Exercise_4
     internal class Movie
     {
         public Movie(string title, string studio, string rating)
-            {
-                _title = title;
-                _studio = studio;
-                _rating = rating;
-            }
+        {
+            Title = title;
+            Studio = studio;
+            Rating = rating;
+        }
 
         public Movie(string title, string studio)
         {
-            _title = title;
-            _studio = studio;
-            _rating = "PG";
+            Title = title;
+            Studio = studio;
+            Rating = "PG";
         }
-        public string _title { get; set; }
-        public string _studio { get; set; }
-        public string _rating { get; set; }
+        public string Title { get; set; }
+        public string Studio { get; set; }
+        public string Rating { get; set; }
 
         static void Main(string[] args)
         {
             var spiderMan = new Movie("Spider Man", "Marvel");
             var casinoRoyale = new Movie("Casino Royale", "Studio 2", "PG13");
             var glass = new Movie("Glass", "Studio1", "PG13");
-            var movies = new List<Movie>            {
+            var movies = new List<Movie>
+            {
                 spiderMan,
                 casinoRoyale,
                 glass
@@ -50,7 +51,7 @@ namespace Exercise_4
             var filtered = new List<Movie>();
             foreach(var movie in movies)
             {
-                if (movie._rating == "PG")
+                if (movie.Rating == "PG")
                 {
                     filtered.Add(movie);
                 }
@@ -58,14 +59,9 @@ namespace Exercise_4
             return filtered.ToArray();
         }
 
-        public string Display()
-        {
-            return $"{_title} {_studio} {_rating}";
-        }
-
         public override string ToString()
         {
-            return $"{_title} {_studio} {_rating}";
+            return $"{Title}, {Studio}, {Rating}";
         }
     }
 }
