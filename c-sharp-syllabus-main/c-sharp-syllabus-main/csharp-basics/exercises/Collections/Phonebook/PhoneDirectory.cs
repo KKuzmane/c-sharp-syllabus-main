@@ -7,20 +7,14 @@ namespace PhoneBook
     {
         private SortedDictionary<string, string> _data = new SortedDictionary<string, string>();
 
-        public PhoneDirectory() {
+        public PhoneDirectory() 
+        {
             _data = new SortedDictionary<string, string>();
         }
 
-        private bool Find(string name) {
-            
-            if (_data.ContainsKey(name))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+        private bool Find(string name) 
+        {
+            return _data.ContainsKey(name);
         }
 
         public string GetNumber(string name) 
