@@ -40,7 +40,7 @@ namespace Exercise_3
         {
             if(this._mileage % 10 == 0)
             {
-                carFuel.Decrement(carFuel._currentFuel);
+                carFuel.Decrement(carFuel.CurrentFuel);
             }
         }
         public int ReturnsCurrentMileage()

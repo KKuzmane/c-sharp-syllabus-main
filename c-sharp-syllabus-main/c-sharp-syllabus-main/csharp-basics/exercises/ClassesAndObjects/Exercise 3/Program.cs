@@ -16,12 +16,12 @@ namespace Exercise_3
         }
 
         public double StartFuel()
-            {
-                Console.WriteLine("Enter yout current fuel amount in liters");
-                double currentFuel = double.Parse(Console.ReadLine());
-                this.CurrentFuel = currentFuel;
-                return currentFuel;
-            }
+        {
+            Console.WriteLine("Enter yout current fuel amount in liters");
+            double currentFuel = double.Parse(Console.ReadLine());
+            this.CurrentFuel = currentFuel;
+            return currentFuel;
+        }
 
         public void Increment(double currentFuel)
         {

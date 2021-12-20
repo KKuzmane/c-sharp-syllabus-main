@@ -8,9 +8,9 @@ namespace EnergyDrinks
 {
     class Program
     {
-        public int NumberedSurveyed;
-        public double PurchasedEnergyDrinks;
-        public double PreferCitrusDrinks;
+        private int NumberedSurveyed;
+        private double PurchasedEnergyDrinks;
+        private double PreferCitrusDrinks;
 
         private Program(int numberSurveyed, double purchasedEnergyDrinks, double preferCitrusDrinks)
         {

@@ -16,6 +16,7 @@ namespace BankAccount
             _accountName = accountName;
             _balance = balance;
         }
+
         public string ShowUserNameAndBalance()
         {
             if (_balance >= 0)
@@ -27,6 +28,7 @@ namespace BankAccount
                 return $"{_accountName}, -${String.Format("{0:0.00}", (_balance * -1))}";
             }
         }
+
         static void Main(string[] args)
         {
             Program benson = new Program("Benson", -17.5);

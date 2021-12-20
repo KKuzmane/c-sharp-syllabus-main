@@ -8,22 +8,22 @@ namespace Exercise_4
 {
     internal class Movie
     {
-        public Movie(string title, string studio, string rating)
+        private Movie(string title, string studio, string rating)
         {
-            Title = title;
-            Studio = studio;
-            Rating = rating;
+            _title = title;
+            _studio = studio;
+            _rating = rating;
         }
 
-        public Movie(string title, string studio)
+        private Movie(string title, string studio)
         {
-            Title = title;
-            Studio = studio;
-            Rating = "PG";
+            _title = title;
+            _studio = studio;
+            _rating = "PG";
         }
-        public string Title { get; set; }
-        public string Studio { get; set; }
-        public string Rating { get; set; }
+        private string _title { get; set; }
+        private string _studio { get; set; }
+        private string _rating { get; set; }
 
         static void Main(string[] args)
         {
@@ -51,7 +51,7 @@ namespace Exercise_4
             var filtered = new List<Movie>();
             foreach(var movie in movies)
             {
-                if (movie.Rating == "PG")
+                if (movie._rating == "PG")
                 {
                     filtered.Add(movie);
                 }
@@ -61,7 +61,7 @@ namespace Exercise_4
 
         public override string ToString()
         {
-            return $"{Title}, {Studio}, {Rating}";
+            return $"{_title}, {_studio}, {_rating}";
         }
     }
 }

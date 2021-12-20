@@ -8,9 +8,9 @@ namespace Exercise_5
 {
     internal class Date
     {
-        public int _month;
-        public int _year;
-        public int _day;
+        private int _month;
+        private int _year;
+        private int _day;
 
         public Date(int day, int month, int year)
         {
