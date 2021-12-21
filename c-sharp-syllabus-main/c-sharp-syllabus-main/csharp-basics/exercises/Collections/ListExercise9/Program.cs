@@ -10,6 +10,7 @@ namespace ListExercise9
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("First List");
             var firstList = new List<string>
             {
                 "Red",
@@ -19,7 +20,12 @@ namespace ListExercise9
                 "Pink"
             };
 
-            Console.WriteLine(string.Join(",", firstList));
+            foreach(string color in firstList)
+            {
+                Console.WriteLine(color);
+            }
+
+            Console.WriteLine("Second List");
 
             var secondList = new List<string>
             {
@@ -30,9 +36,21 @@ namespace ListExercise9
                 "Pink"
             };
 
-            Console.WriteLine(string.Join(",", secondList));
-            //TODO: Write a C# program to join two lists.
-            //...
+            foreach (string color in secondList)
+            {
+                Console.WriteLine(color);
+            }
+
+            Console.WriteLine("Joined List");
+
+            firstList.AddRange(secondList);
+
+            foreach (string color in firstList)
+            {
+                Console.WriteLine(color);
+            }
+
+            Console.ReadKey();
         }
     }
 }
