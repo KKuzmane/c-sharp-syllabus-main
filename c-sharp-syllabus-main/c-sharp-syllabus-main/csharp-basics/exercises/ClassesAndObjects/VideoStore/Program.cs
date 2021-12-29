@@ -47,7 +47,7 @@ namespace VideoStore
 
         private static void ListInventory()
         {
-            _videoStore.ListInventory();
+            _videoStore.ListInventoryV();
         }
 
         private static void FillVideoStore()
@@ -76,7 +76,19 @@ namespace VideoStore
         {
             Console.WriteLine("Enter movie name");
             string movieName = Console.ReadLine();
-            _videoStore.ReturnVideo(movieName);
+            _videoStore.ReturnedVideo(movieName);
+        }
+
+        public void TakeUsersRating(double rating, string title)
+        {
+            foreach (var item in _videoStore.VideoList)
+            {
+                if (item.Title == title)
+                {
+                    item.ReceivingRating(rating);
+                    break;
+                }
+            }
         }
     }
 }
