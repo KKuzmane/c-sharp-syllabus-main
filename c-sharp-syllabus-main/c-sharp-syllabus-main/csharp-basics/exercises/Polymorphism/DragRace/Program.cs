@@ -25,8 +25,7 @@ namespace DragRace
                         car.StartEngine();
                         continue;
                     }
-
-                    if (i == 3)
+                    else if (i == 3)
                     {
                         if (car is IBoostable boostable)
                         {
