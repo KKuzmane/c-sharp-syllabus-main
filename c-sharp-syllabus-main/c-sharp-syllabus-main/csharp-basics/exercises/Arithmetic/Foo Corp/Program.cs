@@ -10,47 +10,29 @@ namespace Foo_Corp
     {
         static void Main(string[] args)
         {
-            double overtimeMultiplyer = 1.5;
+            double minSalary = 8.0;
             double requiredHours = 40;
             double maxHoursPerWeek = 60;
-            double minSalary = 8.0;
-            double overtimeHours = 0;
-            string[] emp1 = { "Employee1", "Employee2", "Employee3"};
-            double[] base1 = { 7.5, 8.2, 10 };
-            double[] hours1 = { 35, 47, 73 };
-            double salary;
-            double hours;
+            double overtimeMultiplyer = 1.5;
 
-            for (int index = 0; index < emp1.Count(); index++)
+            List<Salary> employees = new List<Salary>();
+            employees.Add(new Salary("Employee1", 7.5, 35));
+            employees.Add(new Salary("Employee2", 8.2, 47));
+            employees.Add(new Salary("Employee3", 10, 73));
+
+            foreach (var employee in employees)
             {
-                if (base1[index] < minSalary)
+                if (employee.CheckErrors(minSalary, maxHoursPerWeek) == true)
                 {
                     Console.WriteLine("error");
+                    continue;
                 }
-                else if (hours1[index] > maxHoursPerWeek)
-                {
-                    Console.WriteLine("error");
-                }
-                else
-                {
-                    if (hours1[index] > requiredHours)
-                    {
-                        overtimeHours = hours1[index] - requiredHours;
-                    }
-                    if (hours1[index] < requiredHours)
-                    {
-                        hours = hours1[index];
-                    }
-                    else
-                    {
-                        hours = requiredHours;
-                    }
-                    salary = Math.Round((base1[index] * hours) + (overtimeMultiplyer * overtimeHours * base1[index]), 2);
-                    Console.WriteLine(emp1[index] + " has worked " + hours1[index] + " hours for " + base1[index] + " dollars in an hour. His salary " +
-                        "this week is " + salary + " dollars");
-                }
-            }
 
+                double salary = employee.CalculateSalary(requiredHours, overtimeMultiplyer);
+
+                Console.WriteLine(employee.EmployeeName() + " has worked " + employee.Hours() + " hours for " + employee.Base() + " dollars in an hour. His salary " + "this week is " + salary + " dollars");
+
+            }
             Console.ReadKey();
         }
     }
