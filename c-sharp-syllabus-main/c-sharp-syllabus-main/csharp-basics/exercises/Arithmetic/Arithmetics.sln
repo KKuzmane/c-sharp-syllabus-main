@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foo Corp", "Foo Corp\Foo Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMI", "BMI\BMI.csproj", "{654C4018-DED7-47E5-A7A4-2506E289A690}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArithmeticTask1.Tests", "ArithmeticTask1.Tests\ArithmeticTask1.Tests.csproj", "{0CA6CF62-11ED-46BC-A296-1A5E3930342D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{654C4018-DED7-47E5-A7A4-2506E289A690}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{654C4018-DED7-47E5-A7A4-2506E289A690}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{654C4018-DED7-47E5-A7A4-2506E289A690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CA6CF62-11ED-46BC-A296-1A5E3930342D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CA6CF62-11ED-46BC-A296-1A5E3930342D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CA6CF62-11ED-46BC-A296-1A5E3930342D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CA6CF62-11ED-46BC-A296-1A5E3930342D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
