@@ -11,80 +11,24 @@ namespace FlightPlanner
 {
     class Program
     {
-        private const string Path = "../../flights.txt";
+        public const string Path = "../../flights.txt";
 
         private static void Main(string[] args)
         {
-            var readText = File.ReadAllLines(Path);
+            var createCities = Planner.InsertText(Path);
 
-            Dictionary<string, List<string>> flights = new Dictionary<string, List<string>>();
-            List<string> destinations;
-            List<string> chosenCities = new List<string>();
+            Planner.DisplayStartCities(createCities);
 
-            foreach (var s in readText)
+            string input = Planner.InputCity();
+
+            var roundtrip = Planner.DisplayNewPossibleDestinations(createCities, input);
+
+            Console.WriteLine("Your round trip is booked! See it below:");
+            foreach (var city in roundtrip)
             {
-                string[] fromTo = Regex.Split(s, " -> ");
-
-                if (!flights.TryGetValue(fromTo[0], out destinations))
-                {
-                    destinations = new List<string>();
-                    flights.Add(fromTo[0], destinations);
-                }
-                else
-                {
-                    flights[fromTo[0]].Add(fromTo[1]);
-                }
-
-                if (!flights.TryGetValue(fromTo[1], out destinations))
-                {
-                    destinations = new List<string>();
-                    flights.Add(fromTo[1], destinations);
-                }
-                else
-                {
-                    flights[fromTo[1]].Add(fromTo[0]);
-                }
+                Console.WriteLine(city);
             }
-
-            Console.WriteLine("Enter city name where you want to go first");
-            foreach (var flight in flights)
-            {
-                Console.WriteLine($"{flight.Key}");
-            }
-
-            string firstInput = Console.ReadLine();
-            chosenCities.Add(firstInput);
-            string input = "";
-
-            while (chosenCities[0] != input)
-            {
-                input = firstInput;
-                while (!flights.ContainsKey(input))
-                {
-                    Console.WriteLine("This city is not in our list. Try again.");
-                    Console.WriteLine("Enter city name from where You want to fly: ");
-                    
-                    chosenCities.RemoveAt(chosenCities.Count - 1);
-                    input = Console.ReadLine();
-                    chosenCities.Add(input);
-                }
-
-                foreach (var flight in flights)
-                {
-                    if (input == flight.Key)
-                    {
-                        Console.WriteLine($"From {flight.Key} you can fly to: ");
-                        foreach (string endDestinations in flight.Value.Distinct())
-                        {
-                            Console.WriteLine(endDestinations);
-                        }
-                    }
-                }
-                input = Console.ReadLine();
-                chosenCities.Add(input);
-                firstInput = input;
-            }
-            Console.WriteLine("Your round trip is booked! Thanks for choosing us.");
+            Console.WriteLine("Thanks for shopping with us. Bye!");
             Console.ReadKey();
         }
     }
