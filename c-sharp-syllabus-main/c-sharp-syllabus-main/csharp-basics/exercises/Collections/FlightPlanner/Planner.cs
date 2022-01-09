@@ -10,15 +10,12 @@ namespace FlightPlanner
 {
     public class Planner
     {
-        public static Dictionary<string, List<string>> InsertText(string path)
+        public static Dictionary<string, List<string>> InsertText(string[] path)
         {
-            string[] readText = File.ReadAllLines(path);
-
             Dictionary<string, List<string>> flights = new Dictionary<string, List<string>>();
             List<string> destinations;
-            List<string> chosenCities = new List<string>();
 
-            foreach (string s in readText)
+            foreach (string s in path)
             {
                 string[] fromTo = Regex.Split(s, " -> ");
 
@@ -58,6 +55,7 @@ namespace FlightPlanner
         {
             Console.WriteLine("Insert name of the city");
             string input = Console.ReadLine();
+            Console.WriteLine($"You chose {input}");
 
             return input;
         }
@@ -81,6 +79,7 @@ namespace FlightPlanner
                         chosenCities.RemoveAt(chosenCities.Count - 1);
                         input = InputCity();
                         chosenCities.Add(input);
+                        firstInput = input;
                     }
 
                     if (input == flight.Key)

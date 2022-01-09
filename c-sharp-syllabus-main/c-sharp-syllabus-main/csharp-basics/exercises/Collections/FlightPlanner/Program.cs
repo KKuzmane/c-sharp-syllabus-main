@@ -15,7 +15,9 @@ namespace FlightPlanner
 
         private static void Main(string[] args)
         {
-            var createCities = Planner.InsertText(Path);
+            string[] readText = File.ReadAllLines(Path);
+
+            var createCities = Planner.InsertText(readText);
 
             Planner.DisplayStartCities(createCities);
 
@@ -23,6 +25,7 @@ namespace FlightPlanner
 
             var roundtrip = Planner.DisplayNewPossibleDestinations(createCities, input);
 
+            Console.WriteLine();
             Console.WriteLine("Your round trip is booked! See it below:");
             foreach (var city in roundtrip)
             {

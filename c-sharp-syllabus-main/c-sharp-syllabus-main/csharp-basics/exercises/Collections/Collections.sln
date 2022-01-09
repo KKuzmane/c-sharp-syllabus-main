@@ -45,7 +45,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise 9", "Exercise 9\Ex
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhoneDirectory.Tests", "PhoneDirectory.Tests\PhoneDirectory.Tests.csproj", "{24534AE0-E132-4E15-8236-7DA05B22DE83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCount.Tests", "WordCount.Tests\WordCount.Tests.csproj", "{58F9624F-F963-4C03-9577-BD3AC913C9B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordCount.Tests", "WordCount.Tests\WordCount.Tests.csproj", "{58F9624F-F963-4C03-9577-BD3AC913C9B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightPlanner.Tests", "FlightPlanner.Tests\FlightPlanner.Tests.csproj", "{B1A44B79-A230-4E4F-AFDD-9524C46841CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -137,6 +139,10 @@ Global
 		{58F9624F-F963-4C03-9577-BD3AC913C9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58F9624F-F963-4C03-9577-BD3AC913C9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58F9624F-F963-4C03-9577-BD3AC913C9B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1A44B79-A230-4E4F-AFDD-9524C46841CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1A44B79-A230-4E4F-AFDD-9524C46841CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1A44B79-A230-4E4F-AFDD-9524C46841CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1A44B79-A230-4E4F-AFDD-9524C46841CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
