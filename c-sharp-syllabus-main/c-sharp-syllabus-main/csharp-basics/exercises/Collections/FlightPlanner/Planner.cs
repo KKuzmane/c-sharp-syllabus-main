@@ -68,9 +68,9 @@ namespace FlightPlanner
             chosenCities.Add(firstInput);
             string input = " ";
 
-            foreach (var flight in flights)
+            while (chosenCities[0] != input)
             {
-                while (chosenCities[0] != input)
+                foreach (var flight in flights)
                 {
                     input = firstInput;
                     while (!flights.ContainsKey(input))
@@ -91,10 +91,10 @@ namespace FlightPlanner
                             Console.WriteLine(endDestinations);
                         }
                     }
-                    input = InputCity();
-                    chosenCities.Add(input);
-                    firstInput = input;
                 }
+                input = InputCity();
+                chosenCities.Add(input);
+                firstInput = input;
             }
             return chosenCities;
         }
