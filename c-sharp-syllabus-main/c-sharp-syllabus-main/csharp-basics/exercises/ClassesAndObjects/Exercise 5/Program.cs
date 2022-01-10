@@ -22,7 +22,7 @@ namespace Exercise_5
             int y = int.Parse(Console.ReadLine());
             date.Year(y);
 
-            date.DisplayDate();
+            Console.WriteLine(date.DisplayDate());
 
             Console.ReadKey();
         }
