@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Felime : Mammal
+    public class Felime : Mammal
     {
         public Felime(string animalName, string animalType, double animalWeight, int foodEaten,
             string livingRegion) : base(animalName,
