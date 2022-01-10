@@ -6,9 +6,9 @@ namespace DragRace
 {
     public interface IDragRace
     {
-        void SpeedUp();
-        void SlowDown();
+        int SpeedUp();
+        int SlowDown();
         string ShowCurrentSpeed();
-        void StartEngine();
+        string StartEngine();
     }
 }
