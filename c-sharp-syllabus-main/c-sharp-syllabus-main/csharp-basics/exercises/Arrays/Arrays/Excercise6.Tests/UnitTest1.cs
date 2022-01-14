@@ -15,19 +15,25 @@ namespace Excercise6.Tests
         }
 
         [Test]
-        public void CreateArray_HasToBeTenNumbers()
+        public void RandomNums_HasToReturnTenNumbers()
         {
+            // Act
             var createArray = _target.RandomNumbers();
 
+            // Assert
             Assert.AreEqual(createArray.Length, 10);
         }
 
         [Test]
-        public void FirstArray_LastNumberIsChanged()
+        public void RandomNums_LastNumberIsChanged()
         {
+            // Arrange
             var createArray = _target.RandomNumbers();
+
+            // Act
             var createSecondArray = _target.RandomNumberCopy(_target.RandomNumbers());
 
+            // Assert
             Assert.AreNotEqual(createArray, createSecondArray);
         }
     }
