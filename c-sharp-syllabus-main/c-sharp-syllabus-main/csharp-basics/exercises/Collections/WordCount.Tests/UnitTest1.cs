@@ -12,31 +12,43 @@ namespace WordCount.Tests
         }
 
         [Test]
-        public void Count_WordCount()
+        public void Words_NewString_ShouldReturn11()
         {
+            // Arrange
             string newStringWords = "Life is what happens when you’re busy making other plans.";
+
+            // Act
             int count = _target.Words(newStringWords);
 
+            // Assert
             Assert.AreEqual(11, count);
         }
 
         [Test]
-        public void Count_CharCount()
+        public void Char_NewString_ShouldReturn28()
         {
+            // Arrange
             string newString = "Get busy living or get busy dying.";
             string[] newChars = newString.Split();
+
+            // Act
             int count = _target.Chars(newChars);
 
+            // Assert
             Assert.AreEqual(28, count);
         }
 
         [Test]
-        public void Count_LineCount()
+        public void Lines_NewString_ShouldReturn3()
         {
+            // Arrange
             string newString = "Never let the fear of \nstriking out keep you \nfrom playing the game.";
             string[] newLines = newString.Split('\n');
+
+            // Act
             int count = _target.Lines(newLines);
 
+            // Assert
             Assert.AreEqual(3, count);
         }
     }

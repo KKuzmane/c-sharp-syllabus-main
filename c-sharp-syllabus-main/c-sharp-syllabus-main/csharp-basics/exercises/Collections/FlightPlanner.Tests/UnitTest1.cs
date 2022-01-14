@@ -16,17 +16,19 @@ namespace FlightPlanner.Tests
         }
 
         [Test]
-		public void Planner_CityNameRiga_ReturnsCityNameRiga()
-        {
-             
+		public void InputCity_CityNameRiga_ReturnsCityNameRiga()
+        { 
+            // Arrange  
             var city = "Riga";
             var stringWriter = new StringWriter();
             Console.SetOut(stringWriter);
             var setInCity = new StringReader(city);
             Console.SetIn(setInCity);
              
+            // Act
             Planner.InputCity();
              
+            // Assert
             var output = stringWriter.ToString();
             Assert.AreEqual($"Insert name of the city\r\nYou chose {city}\r\n", output);
         }
@@ -34,13 +36,16 @@ namespace FlightPlanner.Tests
         [Test]
         public void InsertText_InsertRigaTallinn_ReturnDictionary()
         {
+            // Arrange
             string[] path = {"Riga -> Tallinn"};
             Dictionary<string, List<string>> expectedOutput = new Dictionary<string, List<string>>();
             expectedOutput.Add("Riga", new List<string>());
             expectedOutput.Add("Tallinn", new List<string>());
             
+            // Act
             var list = Planner.InsertText(path);
             
+            // Assert
             Assert.AreEqual(expectedOutput, list);
         }
     }
