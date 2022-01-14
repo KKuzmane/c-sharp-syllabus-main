@@ -19,25 +19,31 @@ namespace Exercise1.Tests
         [Test]
         public void PrintProduct_CheckIfPrintsApple50Euroes60Amount_ReturnsString()
         {
+            // Act
             string product = _target.PrintProduct();
-            string value = "Apple, price 50EUR, amount 60";
+            string expectedValue = "Apple, price 50EUR, amount 60";
 
-            Assert.AreEqual(value, product);
+            // Assert
+            Assert.AreEqual(expectedValue, product);
         }
 
         [Test]
         public void ChangeAmount_StartPrice60_Returns10()
         {
+            // Act
             int product = _target.ChangeAmount(10);
 
+            // Assert
             Assert.AreEqual(10, product);
         }
 
         [Test]
         public void ChangePrice_StartPrice50_Returns55()
         {
+            // Act
             double product = _target.ChangePrice(55);
 
+            // Assert
             Assert.AreEqual(55, product);
         }
     }

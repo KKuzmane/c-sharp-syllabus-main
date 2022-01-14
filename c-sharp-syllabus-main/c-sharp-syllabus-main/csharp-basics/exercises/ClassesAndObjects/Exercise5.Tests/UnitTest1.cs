@@ -18,33 +18,41 @@ namespace Exercise5.Tests
         [Test]
         public void Month_Input5_Returns5()
         {
+            // Act
             int month = _target.Month(5);
 
+            // Assert
             Assert.AreEqual(5, month);
         }
 
         [Test]
         public void Day_Input21_Return21()
         {
+            // Act
             int day = _target.Day(21);
 
+            // Assert
             Assert.AreEqual(21, day);
         }
 
         [Test]
         public void Year_Input1995_Return1995()
         {
+            // Act
             int year = _target.Year(1995);
 
+            // Assert
             Assert.AreEqual(1995, year);
         }
 
         [Test]
         public void DisplayDate_ReturnsStringDate()
         {
+            // Act
             string day = _targetWithValues.DisplayDate();
             string expected = "21/5/1995";
 
+            // Assert
             Assert.AreEqual(expected, day);
         }
     }
