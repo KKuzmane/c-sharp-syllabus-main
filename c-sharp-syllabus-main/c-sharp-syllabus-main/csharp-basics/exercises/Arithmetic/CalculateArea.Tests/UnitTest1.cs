@@ -10,31 +10,43 @@ namespace CalculateArea.Tests
         }
 
         [Test]
-        public void Calculate_CircleArea_Radius7()
+        public void CalculateCircleArea_Radius_Return43Point98()
         {
+            // Arrange
             var radius = 7;
+
+            // Act
             var area = CalculateArea.CalculateCircleArea(radius);
 
+            // Assert
             Assert.AreEqual(43.98, area);
         }
 
         [Test]
-        public void Calculate_RectangleArea_Length5Width10()
+        public void CalculateRectangleArea_LengthAndWidth_Return50()
         {
+            // Arrange
             var length = 5;
             var width = 10;
+
+            // Act
             var area = CalculateArea.CalculateRectangleArea(length, width);
 
+            // Assert
             Assert.AreEqual(50, area);
         }
 
         [Test]
-        public void Calculate_TriangleArea_Ground8Height9()
+        public void CalculateTriangleArea_GroundHeight_Return36()
         {
+            // Arrange
             var ground = 8;
             var height = 9;
+
+            // Act
             var area = CalculateArea.CalculateTriangleArea(ground, height);
 
+            // Assert
             Assert.AreEqual(36, area);
         }
     }

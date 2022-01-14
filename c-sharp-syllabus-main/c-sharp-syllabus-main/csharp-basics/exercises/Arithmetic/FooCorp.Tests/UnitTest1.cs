@@ -26,55 +26,69 @@ namespace FooCorp.Tests
         }
 
         [Test]
-        public void Check_IfWorkedMoreThanMaxHours()
+        public void CheckErrors_MinSalaryAnsMaxHoursPerWeek_ExpectTrue()
         {
+            // Act
             bool areErrors = _target3.CheckErrors(_minSalary, _maxHoursPerWeek);
 
+            // Assert
             Assert.AreEqual(true, areErrors);
         }
 
         [Test]
-        public void Check_IfWorkedWithTooSmallBasePay()
+        public void CheckErrors_MinSalaryMaxHoursPerWeek_ExpectedTrue()
         {
+            // Act
             bool areErrors = _target1.CheckErrors(_minSalary, _maxHoursPerWeek);
 
+            // Assert
             Assert.AreEqual(true, areErrors);
         }
 
         [Test]
-        public void Check_IfThereAreNoErrors()
+        public void CheckErrors_MinSalaryMaxHoursPerWeek_ExpectedFalse()
         {
+            // Act
             bool areErrors = _target2.CheckErrors(_minSalary, _maxHoursPerWeek);
 
+            // Assert
             Assert.AreEqual(false, areErrors);
         }
 
         [Test]
-        public void Calculate_SalaryWithNoExtraHours()
+        public void CalculateSalary_RequiredHoursOvertimeMultiplyer_Expected414Point1()
         {
+            // Act
             double calculateSalary = _target2.CalculateSalary(_requiredHours, _overtimeMultiplyer);
 
+            // Assert
             Assert.AreEqual(414.1, calculateSalary);
         }
 
-        public void Calculate_SalaryIfError()
+        public void CalculateSalary_RequiredHoursOvertimeMultiplyer_ExpectedErrorMessage()
         {
+            // Act
             double calculateSalary = _target1.CalculateSalary(_requiredHours, _overtimeMultiplyer);
 
+            // Assert
             Assert.AreNotEqual("", calculateSalary);
         }
 
-        public void Calculate_SalaryWithExtraHours()
+        public void CalculateSalary_RequiredHoursOvertimeMultiplyer_Expect380()
         {
+            // Act
             double calculateSalary = _target4.CalculateSalary(_requiredHours, _overtimeMultiplyer);
 
+            // Assert
             Assert.AreEqual(380, calculateSalary);
         }
 
-        public void Calculate_SalaryWithZeroHours()
+        public void alculateSalary_RequiredHoursOvertimeMultiplyer_Expected0()
         {
+            // Act
             double calculateSalary = _target5.CalculateSalary(_requiredHours, _overtimeMultiplyer);
-
+            
+            // Assert
             Assert.AreEqual(0, calculateSalary);
         }
     }

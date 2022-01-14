@@ -12,22 +12,28 @@ namespace GravityCalculator.Tests
         }
 
         [Test]
-        public void CalculateFinalPosition_TimeIs10()
+        public void GravityCalculator_TimeIs10Seconds_ExpectNegative480Point5()
         {
+            // Arrange
             int seconds = 10;
 
+            // Act
             var finalPosition = _target.GravityCalculator(seconds);
 
+            // Assert
             Assert.AreEqual( -490.5, finalPosition);
         }
 
         [Test]
-        public void CalculateFinalPosition_TimeIs6()
+        public void GravityCalculator_TimeIs6Seconds_ExpectNegative176point58()
         {
+            // Arrange
             int seconds = 6;
 
+            // Act
             var finalPosition = _target.GravityCalculator(seconds);
 
+            // Assert
             Assert.AreEqual(-176.58, finalPosition);
         }
     }

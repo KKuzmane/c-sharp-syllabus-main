@@ -40,18 +40,7 @@ namespace Task_1
 
         public bool IsFifteen(int x, int y)
         {
-            bool isFifteen;
-
-            if ((x == 15) || (y == 15) || ((x + y) == 15) || ((x - y) == 15) || ((y - x) == 15))
-            {
-                isFifteen = true;
-            }
-            else
-            {
-                isFifteen = false;
-            }
-
-            return isFifteen;
+            return (x == 15) || (y == 15) || ((x + y) == 15) || ((x - y) == 15) || ((y - x) == 15);
         }
     }
 }

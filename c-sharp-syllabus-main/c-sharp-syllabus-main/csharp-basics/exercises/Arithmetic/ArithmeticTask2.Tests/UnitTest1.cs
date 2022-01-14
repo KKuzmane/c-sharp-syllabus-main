@@ -13,18 +13,22 @@ namespace ArithmeticTask2.Tests
         }
 
         [Test]
-        public void Check_NumberIsOdd()
+        public void CheckIfOddOrEven_Input3_ReturnsOddNumber()
         {
+            // Act
             string isOdd = _target.CheckIfOddOrEven(3);
 
+            // Assert
             Assert.AreEqual("Odd Number", isOdd);
         }
 
         [Test]
-        public void Check_NumberIsEven()
+        public void CheckIfOddOrEven_Input10_ReturnsEvenNumber()
         {
+            // Act
             string isEven = _target.CheckIfOddOrEven(10);
 
+            // Assert
             Assert.AreEqual("Even Number", isEven);
         }
     }
