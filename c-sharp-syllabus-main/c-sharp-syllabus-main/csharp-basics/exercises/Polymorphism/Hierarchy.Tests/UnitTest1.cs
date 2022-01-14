@@ -18,6 +18,7 @@ namespace Hierarchy.Tests
         [Test]
         public void MakeSound_AnimalsSound_IsEqualAnimalsSound()
         {
+            // Assert
             Assert.AreEqual("Pik pik pik", _mouse.MakeSound());
             Assert.AreEqual("Miau...", _cat.MakeSound());
         }
@@ -25,9 +26,11 @@ namespace Hierarchy.Tests
         [Test]
         public void EatFood_EatsVegtables_ReturnsAmountOrError()
         {
+            // Arrange
             string cat = "Cat Lucijs, no breed, 4,9, Latvia, 6";
             string mouse = "The Mouse is not eating that type of food!";
 
+            // Assert
             Assert.AreEqual(cat, _cat.EatFood(_meat));
             Assert.AreEqual(mouse, _mouse.EatFood(_meat));
         }
@@ -35,9 +38,11 @@ namespace Hierarchy.Tests
         [Test]
         public void ShowAnimal_ReturnAllAnimalParameters()
         {
+            // Arrange
             string cat = "Cat Lucijs, no breed, 4,9, Latvia, 3";
             string mouse = "The Mouse Minnija, 0,4, House, 1";
 
+            // Assert
             Assert.AreEqual(cat, _cat.ShowAnimal());
             Assert.AreEqual(mouse, _mouse.ShowAnimal());
         }
