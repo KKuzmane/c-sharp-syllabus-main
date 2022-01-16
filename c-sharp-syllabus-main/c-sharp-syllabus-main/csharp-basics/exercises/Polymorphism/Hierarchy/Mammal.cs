@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Mammal : Animal
+    public class Mammal : Animal
     {
         protected string _livingRegion;
 
@@ -14,9 +14,9 @@ namespace Hierarchy
             _livingRegion = livingRegion;
         }
 
-        public override void ShowAnimal()
+        public override string ShowAnimal()
         {
-            Console.WriteLine($"{_animalType} {_animalName} {_animalWeight} {_livingRegion}");
+            return $"{_animalType} {_animalName} {_animalWeight} {_livingRegion}";
         }
 
         public override string ToString()
@@ -24,12 +24,14 @@ namespace Hierarchy
             return $"{_animalType} [{_animalName}, {_animalWeight}, {_livingRegion}, {_foodEaten}]";
         }
 
-        public override void EatFood(Food food)
+        public override string EatFood(Food food)
         {
+            return "";
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
+            return "";
         }
     }
 }

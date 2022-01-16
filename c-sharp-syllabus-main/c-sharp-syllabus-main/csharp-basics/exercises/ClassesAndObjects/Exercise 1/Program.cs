@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_1
 {
-    internal class Product
+    public class Product
     {
         private string _name;
         private double _price;
@@ -14,23 +14,25 @@ namespace Exercise_1
 
         public Product(string productName, double productPrice, int productAmount)
         {
-            this._name = productName;
-            this._price = productPrice;
-            this._amount = productAmount;
+            _name = productName;
+            _price = productPrice;
+            _amount = productAmount;
         }
 
-        public void PrintProduct()
+        public string PrintProduct()
         {
-            Console.WriteLine($"{_name}, price {_price}EUR, amount {_amount}");
+            return $"{_name}, price {_price}EUR, amount {_amount}";
         }
 
-        public void ChangeAmount(int newAmount)
+        public int ChangeAmount(int newAmount)
         {
-            this._amount = newAmount;
+            _amount = newAmount;
+            return _amount;
         }
-        public void ChangePrice(double newPrice)
+        public double ChangePrice(double newPrice)
         {
-            this._price = newPrice;
+            _price = newPrice;
+            return _price;
         }
 
         public static void PrintMenu()
@@ -48,9 +50,9 @@ namespace Exercise_1
             Product secondProduct = new Product("iPhone 5s", 999.99, 3);
             Product thirdProduct = new Product("Epson EB-U05", 440.46, 1);
 
-            firstProduct.PrintProduct();
-            secondProduct.PrintProduct();
-            thirdProduct.PrintProduct();
+            Console.WriteLine(firstProduct.PrintProduct());
+            Console.WriteLine(secondProduct.PrintProduct());
+            Console.WriteLine(thirdProduct.PrintProduct());
 
             Console.WriteLine("Choose option");
             Console.WriteLine("1. Change product amount");
@@ -143,9 +145,9 @@ namespace Exercise_1
 
             Console.WriteLine("Your new store: ");
 
-            firstProduct.PrintProduct();
-            secondProduct.PrintProduct();
-            thirdProduct.PrintProduct();
+            Console.WriteLine(firstProduct.PrintProduct());
+            Console.WriteLine(secondProduct.PrintProduct());
+            Console.WriteLine(thirdProduct.PrintProduct());
             Console.ReadKey();
         }
     }

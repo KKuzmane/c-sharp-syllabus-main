@@ -17,10 +17,10 @@ namespace Hierarchy
 
             foreach (Animal animal in animals)
             {
-                animal.ShowAnimal();
-                animal.MakeSound();
+                Console.WriteLine(animal.ShowAnimal());
+                Console.WriteLine(animal.MakeSound());
                 Console.WriteLine($"{foodList[0]}");
-                animal.EatFood(foodList[0]);
+                Console.WriteLine(animal.EatFood(foodList[0]));
             }
 
             Console.WriteLine("End");

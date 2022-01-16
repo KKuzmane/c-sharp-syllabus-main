@@ -7,14 +7,16 @@ namespace DragRace
     public class Ferrari : IDragRace
     {
         private int _currentSpeed = 0;
-        public void SpeedUp()
+        public int SpeedUp()
         {
             _currentSpeed += 25;
+            return _currentSpeed;
         }
 
-        public void SlowDown()
+        public int SlowDown()
         {
             _currentSpeed -= 25;
+            return _currentSpeed;
         }
 
         public string ShowCurrentSpeed()
@@ -22,9 +24,9 @@ namespace DragRace
             return _currentSpeed.ToString();
         }
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("ZummZum.Zummmmm");
+            return "ZummZum.Zummmmm";
         }
     }
 }

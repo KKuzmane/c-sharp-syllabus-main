@@ -19,9 +19,9 @@ namespace Hierarchy
             _foodEaten = foodEaten;
         }
 
-        public virtual void ShowAnimal()
+        public virtual string ShowAnimal()
         {
-            Console.WriteLine($"{_animalType} {_animalName} {_animalWeight}");
+            return $"{_animalType} {_animalName} {_animalWeight}";
         }
 
         public override string ToString()
@@ -29,8 +29,8 @@ namespace Hierarchy
             return _animalType;
         }
 
-        public abstract void EatFood(Food food);
+        public abstract string EatFood(Food food);
 
-        public abstract void MakeSound();
+        public abstract string MakeSound();
     }
 }

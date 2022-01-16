@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercise_5
 {
-    internal class Date
+    public class Date
     {
         private int _month;
         private int _year;
@@ -50,9 +50,9 @@ namespace Exercise_5
             return _year;
         }
 
-        public void DisplayDate()
+        public string DisplayDate()
         {
-            Console.WriteLine($"{_day}/{_month}/{_year}");
+            return $"{_day}/{_month}/{_year}";
         }
     }
 }

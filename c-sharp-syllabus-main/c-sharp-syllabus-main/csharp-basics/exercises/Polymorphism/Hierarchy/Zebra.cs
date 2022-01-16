@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Hierarchy
 {
-    internal class Zebra : Mammal
+    public class Zebra : Mammal
     {
         public Zebra(string animalName, string animalType, double animalWeight, int foodEaten,
             string livingRegion) : base(animalName,
@@ -12,27 +12,27 @@ namespace Hierarchy
         {
         }
 
-        public override void ShowAnimal()
+        public override string ShowAnimal()
         {
-            Console.WriteLine($"{_animalType} {_animalName}, {_animalWeight}, {_livingRegion}, {_foodEaten}");
+            return $"{_animalType} {_animalName}, {_animalWeight}, {_livingRegion}, {_foodEaten}";
         }
 
-        public override void EatFood(Food food)
+        public override string EatFood(Food food)
         {
             if (food is Vegetables)
             {
                 _foodEaten += food._quantity;
-                Console.WriteLine($"{_animalType} {_animalName} {_animalWeight}, {_livingRegion}, {_foodEaten}");
+                return $"{_animalType} {_animalName} {_animalWeight}, {_livingRegion}, {_foodEaten}";
             }
             else
             {
-                Console.WriteLine($"{_animalType} is not eating that type of food!");
+                return $"{_animalType} is not eating that type of food!";
             }
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("Khe khe khe");
+            return "Khe khe khe";
         }
     }
 }

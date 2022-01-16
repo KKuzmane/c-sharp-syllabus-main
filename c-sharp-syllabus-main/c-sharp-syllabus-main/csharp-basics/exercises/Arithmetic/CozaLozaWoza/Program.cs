@@ -10,49 +10,17 @@ namespace CozaLozaWoza
     {
         static void Main(string[] args)
         {
-            int j = 1;
-            
-            while (j <= 110)
-            { 
-                for (int i = 1; i<= 1; i++)
-                {
-                    if ((j % 3 == 0) && (j % 5 == 0) && (j % 7 == 0))
-                    {
-                        Console.Write("CozaLozaWoza ");
-                    }
-                    else if ((j % 3 == 0) && (j % 5 == 0))
-                    {
-                        Console.Write("CozaLoza ");
-                    }
-                    else if ((j % 5 == 0) && (j % 7 == 0))
-                    {
-                        Console.Write("LozaWoza ");
-                    }
-                    else if ((j % 3 == 0) && (j % 7 == 0))
-                    {
-                        Console.Write("CozaWoza ");
-                    }
-                    else if (j % 3 == 0)
-                    {
-                        Console.Write("Coza ");
-                    }
-                    else if (j % 5 == 0)
-                    {
-                        Console.Write("Loza ");
-                    }
-                    else if (j % 7 == 0)
-                    {
-                        Console.Write("Woza ");
-                    }
-                    else Console.Write(j + " ");
-                }
-                if (j % 11 == 0)
+            var text = new CozaLozaWoza().CreateArrays(110);
+
+            for (int i = 0; i < text.Count; i++)
+            {
+                Console.Write(text[i] + " ");
+
+                if ((i+1) % 11 == 0)
                 {
                     Console.WriteLine();
                 }
-                j++;
             }
-            Console.WriteLine();
             Console.ReadKey();
         }
     }

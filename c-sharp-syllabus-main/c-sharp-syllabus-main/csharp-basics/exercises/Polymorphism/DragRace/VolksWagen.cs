@@ -7,14 +7,16 @@ namespace DragRace
     public class VolksWagen : IDragRace, IBoostable
     {
         private int _currentSpeed = 0;
-        public void SpeedUp()
+        public int SpeedUp()
         {
             _currentSpeed += 13;
+            return _currentSpeed;
         }
 
-        public void SlowDown()
+        public int SlowDown()
         {
             _currentSpeed -= 13;
+            return _currentSpeed;
         }
 
         public string ShowCurrentSpeed()
@@ -22,14 +24,15 @@ namespace DragRace
             return _currentSpeed.ToString();
         }
 
-        public void StartEngine()
+        public string StartEngine()
         {
-            Console.WriteLine("EnnEnnEnnnnn....");
+            return "EnnEnnEnnnnn....";
         }
 
-        public void UseNitrousOxideEngine()
+        public int UseNitrousOxideEngine()
         {
             _currentSpeed += 20;
+            return _currentSpeed;
         }
     }
 }

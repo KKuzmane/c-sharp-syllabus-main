@@ -5,33 +5,32 @@ namespace PhoneBook
 {
     public class PhoneDirectory
     {
-        private SortedDictionary<string, string> _data = new SortedDictionary<string, string>();
+        private SortedDictionary<string, string> _data;
 
-        public PhoneDirectory() 
+        public PhoneDirectory()
         {
             _data = new SortedDictionary<string, string>();
         }
 
-        private bool Find(string name) 
+        private bool Find(string name)
         {
             return _data.ContainsKey(name);
         }
 
-        public string GetNumber(string name) 
+        public string GetNumber(string name)
         {
-            if (!Find(name)) 
+            if (!Find(name))
             {
                 return null;
-            } 
-            else 
-            {
-                return _data[name];
             }
+
+            return _data[name];
+
         }
 
-        public void PutNumber(string name, string number) 
+        public void PutNumber(string name, string number)
         {
-            if (name == null || number == null) 
+            if (name == null || number == null)
             {
                 throw new Exception("name and number cannot be null");
             }
