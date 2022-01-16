@@ -83,7 +83,7 @@ namespace FooCorp.Tests
             Assert.AreEqual(380, calculateSalary);
         }
 
-        public void alculateSalary_RequiredHoursOvertimeMultiplyer_Expected0()
+        public void CalculateSalary_RequiredHoursOvertimeMultiplyer_Expected0()
         {
             // Act
             double calculateSalary = _target5.CalculateSalary(_requiredHours, _overtimeMultiplyer);
